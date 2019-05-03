@@ -1,0 +1,24 @@
+.Badge_item {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.Badge_avatar {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.Badge_info {
+  padding: auto;
+}
+
+.twitterIMG_container{
+  width: 26px;
+  height: 26px;
+}
+
+.twitterIMG {
+  width: 100%;
+  height: 100%;
+}

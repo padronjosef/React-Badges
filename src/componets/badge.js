@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./styles/badge.css"
+import "./styles/Badge.css"
 import hero from '../images/badge-header.svg'
 // import avatar from '../images/avatar.png'
 
@@ -20,11 +20,11 @@ class Badge extends React.Component {
 
         <div className="Badge_section-info">
           <h3>{this.props.jobTitle}</h3>
-          <div>@{this.props.twitter}</div>
+          <div>{this.props.email}</div>
         </div>
 
         <div className="Badge_footer">
-          {this.props.webPage}
+          @{this.props.twitter}
         </div>
       </div>
     )

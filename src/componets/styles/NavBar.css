@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.Navbar_brand-logo{
+  width: 30px;
+}
+
 .Navbar_brand:hover{
   color:#ffffff;
   text-decoration: none;
