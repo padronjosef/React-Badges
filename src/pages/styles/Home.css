@@ -1,0 +1,22 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A1A24;
+  background-image: url(../../images/stars.svg);
+  color: #FEFEFE;
+  padding: 3em 0;
+  height: 100vh;
+}
+
+
+.Logo_home {
+  max-height: 80px;
+}
+
+.Avatar_home {
+  max-height: 250px;
+  max-width: 250px;
+  margin: 0 4em;
+  border-radius: 50%;
+}

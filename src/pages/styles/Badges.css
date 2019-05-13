@@ -19,6 +19,11 @@
   padding: 0 1rem;
 }
 
+.Badge_Button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .Badges_conf-logo {
   margin-bottom: .5rem;
   height: 120px;

@@ -8,32 +8,24 @@ class BadgeList extends React.Component {
       <ul className="list-unstyled">
         {this.props.Badge.map((Badge) => {
           return (
-            <li className="Badge_item" key={Badge.id}>
-              <div className="row mb-3">
-                <div className="col-2">
+            <li className="Badge_item mb-4" key={Badge.id}>
+                <figure className="Avatar_container">
                   <img className="Badge_avatar" src={Badge.avatarUrl} alt="avatar"/>
-                </div>
+                </figure>
 
-                <div className="col-10 Badge_info">
+                <div className="Badge_info">
                   <h4 className="mb-0">
                     {Badge.firstName} {Badge.lastName}
                   </h4>
 
-                  <div className="row">
-                    <div className="twitterIMG_container col pr-0 pr-0">
-                      <img className="twitterIMG" src={twitterIMG} alt="twitter logo"/>
-                    </div>
-                    <p className="col-11 mb-1 pl-1">
-                      @{Badge.twitter}
-                    </p>
+                  <div className="Badge_twitter">
+                    <img className="twitterIMG" src={twitterIMG} alt="twitter logo"/>
+                    <p className="mb-1"> @{Badge.twitter} </p>
                   </div>
 
-                  <small className="mb-0">
-                    {Badge.jobTitle}
-                  </small>
+                  <small className="mb-0"> {Badge.jobTitle} </small>
                 </div>
 
-              </div>
             </li>
           )
         })}

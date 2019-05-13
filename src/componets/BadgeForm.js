@@ -85,7 +85,7 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <button onClick={this.handleClick} className="btn btn-primary">Save</button>
+          <button onClick={this.handleClick} className="btn btn-primary mb-3">Save</button>
         </form>
       </div>
     )
