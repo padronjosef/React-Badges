@@ -72,6 +72,7 @@ class BadgeEdit extends React.Component {
     if (this.state.loading) {
       return <PageLoading />
     }
+
     return (
       <React.Fragment>
         <Link to="/badges">
@@ -91,6 +92,8 @@ class BadgeEdit extends React.Component {
                 email={this.state.form.email || 'example@email.com'}
                 avatarUrl={this.state.form.avatarUrl || 'https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/58379116_1482626721871762_8224097773172031488_n.jpg?_nc_cat=110&_nc_ht=scontent.fbog2-1.fna&oh=98e3183a77a4cc665021353a285ef8db&oe=5D6849C8'}
               />
+
+            <Link className="btn btn-danger mt-4 col-4 offset-4" to="`/badges/${badge.id}`">Back</Link>
             </div>
 
             <div className="col-6">
