@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavBar from '../componets/NavBar'
-import Footer from '../componets/Footer'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 function Layout (props) {
   // const children = props.children

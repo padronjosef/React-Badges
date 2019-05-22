@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './styles/BadgeNew.css'
+import './styles/BadgeEdit.css'
 import header from '../images/badge-header.svg'
 import BadgeForm from '../components/BadgeForm'
 import Badge from '../components/Badge'
@@ -9,9 +9,9 @@ import PageLoading from '../components/PageLoading'
 import api from '../api'
 import md5 from "md5";
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
   state= {
-    loading: false,
+    loading: true,
     error: null,
 
     form: {
@@ -20,6 +20,24 @@ class BadgeNew extends React.Component {
       email: '',
       jobTitle: '',
       twitter: '',
+    }
+  }
+
+  componentDidMount() {
+    this.fetchData()
+  }
+
+  fetchData = async e => {
+    this.setState({loading: true, error: null})
+
+    try {
+      const data = await api.badges.read(
+        this.props.match.params.badgeId
+      )
+
+      this.setState({loading: false, form: data})
+    } catch (error) {
+      this.setState({loading: false, error: error})
     }
   }
 
@@ -40,10 +58,11 @@ class BadgeNew extends React.Component {
     let hash = md5(email);
     try {
       this.state.form.avatarUrl = `https://s.gravatar.com/avatar/${hash}?d=identicon`;
+      
+      await api.badges.update(this.props.match.params.badgeId, this.state.form)
+      this.setState({ loading: false })
 
       this.props.history.push('/badges')
-      await api.badges.create(this.state.form)
-      this.setState({ loading: false })
     } catch (error) {
       this.setState ({ loading: false, error: error })
     }
@@ -73,9 +92,9 @@ class BadgeNew extends React.Component {
                 avatarUrl={this.state.form.avatarUrl || 'https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/58379116_1482626721871762_8224097773172031488_n.jpg?_nc_cat=110&_nc_ht=scontent.fbog2-1.fna&oh=98e3183a77a4cc665021353a285ef8db&oe=5D6849C8'}
               />
             </div>
-            
+
             <div className="col-6">
-            <h1>New Attendant</h1>
+            <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.hadnleSubmit}
@@ -90,5 +109,5 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew
+export default BadgeEdit
 
