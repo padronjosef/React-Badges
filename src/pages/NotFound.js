@@ -10,8 +10,8 @@ function NotFound() {
         <img className="Notfound-img" src={nfimg} alt="404 img"/>
       </figure>
       <div>
-        <h1>¿ Por que eres asi ?</h1>
-        <p>Ya me rompiste la pagina :(</p>
+        <h1> Why are you like that? </h1>
+        <p> You already broke my webpage <strong> :( </strong> </p>
       </div>
     </div>
   )

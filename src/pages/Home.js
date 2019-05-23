@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './styles/Home.css'
 import ConfLogo from '../images/logo.png'
-import Astronauts from '../images/avatar.png'
+import Logo from '../images/logo.svg'
 
 class Home extends React.Component {
   render(){
@@ -16,7 +16,7 @@ class Home extends React.Component {
         </div>
 
         <figure>
-          <img className="Avatar_home" src={Astronauts} alt=""/>
+          <img className="Avatar_home" src={Logo} alt=""/>
         </figure>
       </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './styles/BadgeEdit.css'
-import header from '../images/badge-header.svg'
+import header from '../images/conf-logo.png'
 import BadgeForm from '../components/BadgeForm'
 import Badge from '../components/Badge'
 import PageLoading from '../components/PageLoading'
@@ -83,7 +83,7 @@ class BadgeEdit extends React.Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col">
               <Badge 
                 firstName={this.state.form.firstName || 'First_Name'}
                 lastName={this.state.form.lastName || 'Last_Name'}
@@ -96,7 +96,7 @@ class BadgeEdit extends React.Component {
             <Link className="btn btn-danger mt-4 col-4 offset-4" to="`/badges/${badge.id}`">Back</Link>
             </div>
 
-            <div className="col-6">
+            <div className="col">
             <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './styles/BadgeNew.css'
-import header from '../images/badge-header.svg'
+import header from '../images/conf-logo.png'
 import BadgeForm from '../components/BadgeForm'
 import Badge from '../components/Badge'
 import PageLoading from '../components/PageLoading'
@@ -63,7 +63,7 @@ class BadgeNew extends React.Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col">
               <Badge 
                 firstName={this.state.form.firstName || 'First_Name'}
                 lastName={this.state.form.lastName || 'Last_Name'}
@@ -74,7 +74,7 @@ class BadgeNew extends React.Component {
               />
             </div>
             
-            <div className="col-6">
+            <div className="col">
             <h1>New Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}

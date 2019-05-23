@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "./styles/Badge.css"
-import hero from '../images/badge-header.svg'
+import hero from '../images/logo-react.png'
 import Gravatar from './Gravatar'
 
 class Badge extends React.Component {
